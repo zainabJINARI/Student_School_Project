@@ -1,0 +1,11 @@
+<h1>Add New Student</h1>
+
+<form (submit)="handleAddStudent()"  [formGroup]="studentFormGroup">
+    <label for="fullname" >fullname</label>
+    <input type="text" id="fullname" formControlName="fullname">
+    <label for="year" >Year</label>
+    <input type="text" id="year" formControlName="year">
+    <label for="email">Email</label>
+    <input type="email" id="email" formControlName="email">
+    <button type="submit" > Create New Student</button>
+</form>

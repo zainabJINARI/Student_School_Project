@@ -1,0 +1,25 @@
+
+
+
+<a routerLink="/addStudent" >Add Student</a>
+<table >
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>FullNmae </th>
+            <th>Year</th>
+            <th>School</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let s of students">
+            <td>{{s.id}}</td>
+            <td>{{s.fullname}}</td>
+            <td>{{s?.year}}</td>
+            <td>{{s.school}}</td>
+           
+        </tr>
+    </tbody>
+
+</table>
