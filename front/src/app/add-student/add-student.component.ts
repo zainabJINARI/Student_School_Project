@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { StudentService } from '../services/student.service';
 import { FormBuilder, FormGroup, ReactiveFormsModule, ValidationErrors, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-add-student',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule,NgbModule],
   templateUrl: './add-student.component.html',
   styleUrl: './add-student.component.css'
 })

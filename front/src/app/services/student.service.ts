@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Student } from '../models/Student';
 import { Observable, of, throwError } from 'rxjs';
+import { School } from '../models/School';
 
 @Injectable({
   providedIn: 'root'
@@ -68,6 +69,19 @@ export class StudentService {
     student.id=this.students.length+1
     this.students.push(student)
     return of(true)
+  }
+
+
+  setSchool(id:number,school:School){
+   this.students= this.students.map((s)=>{
+    if(s.id==id){
+      s.school=school
+    }
+    return s
+
+    })
+    console.log(this.students)
+
   }
   
 }

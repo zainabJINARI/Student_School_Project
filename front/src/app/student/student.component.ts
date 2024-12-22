@@ -3,10 +3,12 @@ import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { Student } from '../models/Student';
 import { StudentService } from '../services/student.service';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 @Component({
   selector: 'app-student',
   standalone: true,
-  imports: [NgFor,NgIf,RouterModule],
+  imports: [NgFor,NgIf,RouterModule,NgbModule],
   templateUrl: './student.component.html',
   styleUrl: './student.component.css'
 })
